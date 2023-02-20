@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04testform.html</title>
+    <style>
+        *{
+            font-size: 16pt; 
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function mycheck(){
+            var dtitle = document.myform.title.value;
+            if (dtitle=="" || dtitle==null){
+                alert("이름이 공백입니다");
+                return ; //함수탈출
+            }
+            var dage = document.myform.age.value;
+            if (dage=="" || dage==null){
+                alert("나이가 공백입니다");
+                return ; //함수탈출
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>04testform.html</h2>
+    <form name="myform" action="" method="get">
+        이름 <input type="text" name="title" size="10"> <br>
+        나이 <input type="text" name="age" size="10" maxlength="3"> <br>
+        <input type="submit" onclick="mycheck()" value="button버튼">
+        <input type="reset" value="입력취소">
+    </form>
+</body>
+</html>
